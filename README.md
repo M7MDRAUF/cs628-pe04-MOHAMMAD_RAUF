@@ -38,17 +38,6 @@ URL: `/cities/1` — the list and details coexist on the same layout via `<Outle
 
 ---
 
-### 5. After clicking "Add City" — redirected back to Cities List
-The newly added Seattle appears in the list, confirming the `useNavigate` redirect works.
-![After Add Redirect](docs/screenshots/05-after-add-redirect.png)
-
----
-
-### 6. Details of the newly added Seattle city
-![New Seattle Details](docs/screenshots/06-new-seattle-details.png)
-
----
-
 ## Project structure
 
 ```
