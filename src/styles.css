@@ -1,0 +1,245 @@
+/* ===========================================================================
+ * Cities Application — global styles
+ * Visual design intentionally mirrors the HOS05 mockups:
+ *   - dark slate header with a large "Cities Application" title
+ *   - text navigation links right-aligned in the header
+ *   - white card body with comfortable padding
+ * ========================================================================= */
+
+:root {
+  --color-bg: #f3f4f6;
+  --color-card: #ffffff;
+  --color-header: #2f3336;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-link: #6b21a8;
+  --color-error: #b91c1c;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.app-header {
+  background: var(--color-header);
+  color: #fff;
+  padding: 28px 48px 20px 48px;
+}
+
+.app-header__title {
+  margin: 0 0 12px 0;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.app-nav {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.app-nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+  transition:
+    border-color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.app-nav__link:hover {
+  opacity: 0.85;
+}
+.app-nav__link.active {
+  border-bottom-color: #ffffff;
+}
+
+/* ---------- Main / card ---------- */
+.app-main {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.app-card {
+  background: var(--color-card);
+  width: 100%;
+  max-width: 880px;
+  padding: 28px 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.page-title {
+  margin: 0 0 18px 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+/* ---------- Cities list ---------- */
+.cities-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 8px;
+}
+.cities-list__item {
+  margin: 6px 0;
+}
+.cities-list__link {
+  color: var(--color-link);
+  text-decoration: underline;
+  font-weight: 500;
+}
+.cities-list__link:hover {
+  color: #4c1d95;
+}
+
+.empty-state {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* ---------- City details (nested inside list page) ---------- */
+.city-details-slot {
+  margin-top: 16px;
+}
+.city-details {
+  padding-top: 12px;
+}
+.city-details__title {
+  margin: 8px 0 12px 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.city-details__list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 12px;
+  margin: 0;
+}
+.city-details__list dt {
+  font-weight: 600;
+  color: var(--color-text);
+}
+.city-details__list dd {
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* ---------- Add City form ---------- */
+.add-city-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+}
+.add-city-form__row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.add-city-form__row--block {
+  grid-template-columns: 1fr;
+}
+.add-city-form__row span {
+  font-weight: 500;
+}
+.add-city-form input,
+.add-city-form textarea {
+  padding: 6px 8px;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  width: 100%;
+}
+.add-city-form input:focus,
+.add-city-form textarea:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+  border-color: var(--color-accent);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn--primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+}
+.btn--primary:focus-visible {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
+/* ---------- Misc ---------- */
+.form-error {
+  color: var(--color-error);
+  margin: 0;
+  font-weight: 500;
+}
+.warn {
+  background: #fef3c7;
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+.app-footer {
+  text-align: center;
+  padding: 14px;
+  color: var(--color-muted);
+}
+
+.not-found {
+  text-align: center;
+}
