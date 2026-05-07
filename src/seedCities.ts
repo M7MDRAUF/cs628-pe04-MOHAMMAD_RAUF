@@ -12,18 +12,4 @@ export const SEED_CITIES: ReadonlyArray<City> = [
     population: 733_919,
     description: 'Home of the Space Needle and Pike Place Market.',
   },
-  {
-    id: '2',
-    name: 'Tokyo',
-    country: 'Japan',
-    population: 13_960_000,
-    description: 'The capital of Japan and the most populous metropolitan area in the world.',
-  },
-  {
-    id: '3',
-    name: 'Cairo',
-    country: 'Egypt',
-    population: 9_540_000,
-    description: 'The capital of Egypt, on the banks of the Nile.',
-  },
 ];
