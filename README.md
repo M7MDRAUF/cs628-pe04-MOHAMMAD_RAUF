@@ -1,7 +1,7 @@
-# Cities Application — HOS05
+# Cities Application — PE04
 
 A production-quality React + TypeScript SPA built with **Vite** and **React Router v7**.  
-Satisfies every requirement of the CS628 HOS05 hands-on assignment.
+Satisfies every requirement of the CS628 PE04 hands-on assignment.
 
 | Requirement | How it is met |
 |---|---|

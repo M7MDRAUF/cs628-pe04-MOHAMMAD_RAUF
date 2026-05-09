@@ -5,7 +5,7 @@ import { NavLink, Outlet } from 'react-router-dom';
  *
  * Renders the dark application header with navigation links followed by an
  * `<Outlet />` so child routes can plug in their own content while keeping a
- * consistent layout — exactly as required by HOS05 (the City Details screen
+ * consistent layout — exactly as required by PE04 (the City Details screen
  * must replace a section *within* the Cities List page, not the whole page).
  */
 export default function Layout(): React.JSX.Element {
@@ -30,7 +30,7 @@ export default function Layout(): React.JSX.Element {
       </main>
 
       <footer className="app-footer">
-        <small>HOS05 &middot; React Router Cities &middot; CS628</small>
+        <small>PE04 &middot; React Router Cities &middot; CS628</small>
       </footer>
     </div>
   );
